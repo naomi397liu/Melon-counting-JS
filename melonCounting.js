@@ -13,17 +13,17 @@ const melonsToAdd = ['Ogen', 'Horned Melon', 'Watermelon', 'Casaba',
                  'Watermelon', 'Santa Claus', 'Casaba']
 
                 
-function countMelons(melon_list){
-    let melon_counts = {};
+function countMelons(melonList){
+    const melonCounts = {};
 
-    for (let melon of melon_list){
-        if (melon_counts.hasOwnProperty(melon)){
-            melon_counts[melon] = melon_counts[melon] + 1;
+    for (const melon of melonList){
+        if (melonCounts.hasOwnProperty(melon)){
+            melonCounts[melon] += 1;
         }else{
-            melon_counts[melon] = 1;
+            melonCounts[melon] = 1;
         }
     }
-    return melon_counts
+    return melonCounts
 }
 
 console.log(countMelons(melonsToAdd))
